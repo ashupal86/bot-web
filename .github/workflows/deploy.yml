@@ -86,5 +86,4 @@ jobs:
 
             - name: Deploy to server
               run: |
-                  echo $(curl -X POST http://test.ashu.devinit.in:8000/deploy \
-                  -H "Content-Type: application/json" \)
+                  echo $(curl -X POST http://test.ashu.devinit.in:9000/deploy -H "X-API-KEY:${{ secrets.AUTH_TOKEN }}" \)
