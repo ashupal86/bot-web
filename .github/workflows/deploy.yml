@@ -86,4 +86,4 @@ jobs:
 
             - name: Deploy to server
               run: |
-                  echo $(curl -X POST http://test.ashu.devinit.in/deploy -H "X-API-KEY:${{ secrets.AUTH_TOKEN }}" )
+                  echo $(curl -X POST http://test.ashu.devinit.in/deployee -H "X-API-KEY:${{ secrets.AUTH_TOKEN }}" )
