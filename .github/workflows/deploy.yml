@@ -54,6 +54,7 @@ jobs:
                   node-version: '16'
 
             - name: Install dependencies
+              working-directory: ./frontend
               run: |
                   npm install
 
