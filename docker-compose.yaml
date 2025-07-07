@@ -2,19 +2,18 @@ version: '3.8'
 
 services:
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
+    image: ashu111/bot-web-frontend:latest
+    
     ports:
-      - "3000:3000"
+      - "3000:80"
 
 
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+    image: ashu111/bot-web-backend:latest
     ports:
       - "8000:8000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
     
 
 
